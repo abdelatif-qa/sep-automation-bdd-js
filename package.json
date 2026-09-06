@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npx cucumber-js",
-    "test:tag": "npx cucumber-js --tags @sep19",
+    "test:tag": "npx cucumber-js --tags @sep08",
     "test:tag:dryrun": "npx cucumber-js --tags @tagName --dry-run",
     "test:smoke": "npx cucumber-js --tags @smoke",
     "Mac-open:report": "open reports/cucumber-report.html",
@@ -21,8 +21,6 @@
   },
   "dependencies": {
     "@cucumber/cucumber": "^13.2.1",
-    "@faker-js/faker": "^10.6.0",
-    "cucumber-html-reporter": "^5.0.2",
-    "dotenv": "^17.4.2"
+    "cucumber-html-reporter": "^5.0.2"
   }
 }
