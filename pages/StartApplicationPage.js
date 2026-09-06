@@ -123,68 +123,7 @@ export class StartApplicationPage extends BasePage {
 
     this.discountedPrice = page.locator("//b[@class='info-primary']");
 
-    this.originalPrice = page.locator("//s[contains(.,'$')]");
-
-    
+    this.originalPrice = page.locator("//s[contains(.,'$')]"); 
   }
 
-  /**
-   * @param {string} firstName
-   */
-  async enterFirstName(firstName) {
-    await this.firstNameInputBox.fill(firstName);
-  }
-
-  /**
-   * @param {string} lastName
-   */
-  async enterLastName(lastName) {
-    await this.lastNameInputBox.fill(lastName);
-  }
-
-  /**
-   * @param {string} email
-   */
-  async enterEmail(email) {
-    await this.emailInputBox.fill(email);
-  }
-
-  /**
-   * @param {string} phoneNumber
-   */
-  async enterPhoneNumber(phoneNumber) {
-    await this.phoneNumberInputBox.fill(phoneNumber);
-  }
-
-  /**
-   * @param {string} howDidYouHear
-   */
-  async selectHowDidYouHearAboutUs(howDidYouHear) {
-    howDidYouHear = howDidYouHear.toLowerCase();
-    await this.howDidYouHearAboutUsDropDown.click();
-    switch (howDidYouHear) {
-      case "email":
-        await this.emailOptionFromDropDown.click();
-        break;
-      case "facebook":
-        await this.facebookOptionFromDropDown.click();
-        break;
-      case "google":
-        await this.googleOption.click();
-        break;
-      case "instagram":
-        await this.instagramOptionFromDropDown.click();
-        break;
-      case "linkedin":
-        await this.linkedInOptionFromDropDown.click();
-        break;
-      case "twitter":
-        await this.twitterOptionFromDropDown.click();
-        break;
-    }
-  }
-
-  async clickNextButton() {
-    await this.nextButton.click();
-  }
 }
